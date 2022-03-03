@@ -1,0 +1,172 @@
+import logo from './logo.svg';
+
+import './App.css';
+function App() {
+  return (
+    
+<div className="App">
+    
+ </div>
+ 
+
+ );
+
+}
+
+export default App;
+
+
+
+// var mystyle={
+//   color:'blue',
+//   textAlign:'center'
+// }
+// function Header(){
+//   return <div>
+//     <h1>welcome to kluniversity</h1>
+//     <h2>department cse</h2>
+//   </div>
+// }
+// function Sidebar(){
+//   return <div>
+//     <h1>sidebar</h1>
+     
+//   </div>
+// }
+// function Navbar(){
+//   return <div style={mystyle}>
+//     <h1 >Klu Register form</h1>
+//     username<input type='text'/><br/>
+//     password<input type='password'/><br/>
+//  <button>submit</button>
+     
+//   </div>
+// }
+// function Add(){
+//   return <div>
+//     <Header/>
+//     <Sidebar/>
+//     <Navbar/>
+//   </div>
+// }
+// ReactDOM.render(<Add/>,document.getElementById('root'));
+// var mystyle={
+//   color:'blue',
+//   textAlign:'center'
+// }
+
+
+  //  just printing
+// const myele = 
+// <div className='header'> 
+//   <h1>welcome to kluniversity</h1>
+//   <h2>Department cse</h2>
+//   <p>login plse</p>
+//     </div>
+// ReactDOM.render(myele,document.getElementById('root'));
+
+            // pointer function
+// var a=(x)=>
+// {
+//   var a =10;
+//   var b=10;
+//   var c=a+b;
+//   document.getElementById('root').innerHTML=c;
+// }
+// a(5);
+
+        //   using let
+// var n=(x) =>{
+//   var a=15;{
+//     if(a==15){
+//       let a=20;
+//     }
+//   }
+//   document.getElementById('root').innerHTML=a;
+// }
+// n();
+
+ class component
+
+
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+// var mystyle={
+//    color:'black',
+//   textAlign:'center'
+//  }
+//  var mystyle1={
+//   color:'red',
+//  textAlign:'center'
+// }
+class Parent extends React.Component{
+  render()
+  {
+    //return <div style={mystyle}>
+    return <div className='header'>
+      <h1>KL UNIVERSITY</h1>
+      <h1>Dept Of Computer Science</h1>
+      <h1>Login Form</h1>
+      </div>
+    
+  }
+
+}
+class Child extends React.Component{
+  render(){
+//return <div style={mystyle1}>
+return <div className='header'>
+<Parent/>
+
+USER NAME:<br/><input type='text'/><br/>
+<br/>
+PASSWORD:<br/><input type='password'/><br/>
+<br/>
+<button>Submit</button>
+</div>
+  }
+}
+ReactDOM.render(<Child/>,document.getElementById('root'));
+
+
+
+//                    orderlist
+
+
+// const newlist=[1,2,3,4,5,'hi','bye']
+// const r1=newlist.map((listvalues)=>{
+//   return <li>{listvalues+" "+newlist}</li>
+// });
+// ReactDOM.render(<ul>{r1}</ul>,document.getElementById("root"));
+
+
+//                         unorderlist
+function Menubar(props){
+  const myvalue=props.myvalue
+  const r1=myvalue.map((listvalues)=>{
+    return <li>{listvalues}</li>
+  });
+  return <ul>{r1}</ul>
+}
+const myvalue=[2,3,4,5]
+ReactDOM.render(<Menubar myvalue={myvalue}/>,document.getElementById("root"));
+
+//                 keys
+function Menubar(props){
+const content=props.data.map((show)=>
+<div key={show.id}>
+  <h3>{show.id}:{show.title}:{show.content}</h3>
+</div>
+);
+return(
+<div>
+  {content}
+  </div>
+)};
+const myvalues=[
+  {id:1,title:'first',content:'KL UNIVERSITY'},
+  {id:2,title:'second',content:'ReactJS'}
+];
+ReactDOM.render(<Menubar data={myvalues}/>,document.getElementById("root"));
